@@ -32,7 +32,7 @@
                                               endAddress="Gravataí, RS">
                                 <gmaps:waypoints>
                                     <gmaps:Waypoint id="point1" location="Sapucaia do Sul, RS" stopover="true"/>
-                                    
+                                    <gmaps:Waypoint id="point2" location="Triunfo, RS"         stopover="true"/>
                                     <gmaps:Waypoint id="point3" location="Canoas, RS"          stopover="true"/>
                                     <gmaps:Waypoint id="point4" location="Porto Alegre, RS"    stopover="true"/>
                                 </gmaps:waypoints>
