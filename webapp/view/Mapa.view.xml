@@ -12,36 +12,33 @@
 		applyContentPadding="false"
 		expanded="{device>/isNoPhone}"
 		class="sapUiResponsiveContentPadding">
-        <items>
-            <IconTabFilter id="produtos" text="Produtos" key="products">
-				<Text text="Lista de produtos ..." />
-			</IconTabFilter>
-			<IconTabFilter id="centros" text="Centros" key="centers">
-				<Text text="Centros listados aqui ..." />
-			</IconTabFilter>
-            <IconTabFilter id="rotas" text="Rotas" key="routes">
-                <content>
-                    <gmaps:Map id="gmap" height="500px" zoom="12" lat="-29.76028" lng="-51.14722" 
-                    apiKey="Your Key Here">
-                        <gmaps:markers>
-                            <gmaps:Marker id="marker1" lat="-29.70824" lng="-51.15724" info="Novo Hamburgo" draggable="true"/>
-                        </gmaps:markers>
-                        <gmaps:directions>
-                            <gmaps:Directions id="rota1" 
-                                              startAddress="São Leopoldo, RS" 
-                                              endAddress="Gravataí, RS">
-                                <gmaps:waypoints>
-                                    <gmaps:Waypoint id="point1" location="Sapucaia do Sul, RS" stopover="true"/>
-                                    <gmaps:Waypoint id="point2" location="Triunfo, RS"         stopover="true"/>
-                                    <gmaps:Waypoint id="point3" location="Canoas, RS"          stopover="true"/>
-                                    <gmaps:Waypoint id="point4" location="Porto Alegre, RS"    stopover="true"/>
-                                </gmaps:waypoints>
-                            </gmaps:Directions>
-                        </gmaps:directions>
-                    </gmaps:Map>
-                </content>
-            </IconTabFilter>    
-        </items>
+            <items>
+                <IconTabFilter id="produtos" text="Produtos" key="products">
+                    <Text id="produto" text="Lista de produtos ..." />
+                </IconTabFilter>
+                <IconTabFilter id="centros" text="Centros" key="centers">
+                    <Text id="centro" text="Centros listados aqui ..." />
+                </IconTabFilter>
+                <IconTabFilter id="rotas" text="Rotas" key="routes">
+                    <content>
+                        <gmaps:Map id="gmap" height="500px" zoom="12" lat="-29.76028" lng="-51.14722" 
+                        apiKey="">
+                            <gmaps:directions>
+                                <gmaps:Directions
+                                                id="route"
+                                                startAddress="{start}" 
+                                                endAddress="{end}"
+                                                waypoints="{stops}">
+                                    <gmaps:waypoints>
+                                        <gmaps:Waypoint id="parada" 
+                                                        location="{name}"/>
+                                    </gmaps:waypoints>
+                                </gmaps:Directions>
+                            </gmaps:directions>
+                        </gmaps:Map>
+                    </content>
+                </IconTabFilter>    
+            </items>
         </IconTabBar>
     </Page>
 </mvc:View>
