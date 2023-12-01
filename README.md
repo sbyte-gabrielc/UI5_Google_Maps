@@ -34,7 +34,7 @@ A Fiori application.
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 2. Open the project, in the console, run
    ```
-    npm install ui5/cli
+    npm install ui5/@cli
    ```
 3. For testing, run
    ```
